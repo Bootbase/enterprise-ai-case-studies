@@ -8,7 +8,7 @@
 | **Category**     | Knowledge Management          |
 | **Industry**     | Cross-Industry (Financial Services, Pharmaceutical, Healthcare, Energy, Insurance) |
 | **Complexity**   | High                         |
-| **Status**       | `research`                   |
+| **Status**       | `detailed`                   |
 
 ---
 
