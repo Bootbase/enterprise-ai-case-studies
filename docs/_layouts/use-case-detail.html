@@ -2,42 +2,47 @@
 layout: default
 ---
 
+{% assign parent = site.pages | where: "layout", "use-case" | where: "slug", page.slug | first %}
+
 <div class="uc-hero">
   <div class="container">
     <div class="uc-breadcrumb">
       <a href="{{ '/' | relative_url }}">Catalog</a>
       <i data-lucide="chevron-right"></i>
-      <span>{{ page.category }}</span>
+      <span>{{ parent.category | default: page.category }}</span>
       <i data-lucide="chevron-right"></i>
       <a href="{{ '/use-cases/' | append: page.slug | append: '/' | relative_url }}">{{ page.uc_id }}</a>
       <i data-lucide="chevron-right"></i>
       <span>{{ page.detail_title }}</span>
     </div>
-    <h1 class="uc-title">{{ page.uc_title }}</h1>
+    <h1 class="uc-title">{{ parent.title | default: page.uc_title }}</h1>
     <div class="uc-meta-badges">
       <span class="badge badge-id">{{ page.uc_id }}</span>
       <span class="badge badge-category">
-        <i data-lucide="{{ page.category_icon | default: 'folder' }}"></i>
-        {{ page.category }}
+        <i data-lucide="{{ parent.category_icon | default: 'folder' }}"></i>
+        {{ parent.category | default: page.category }}
       </span>
-      {% if page.industry %}
+      {% assign industry = parent.industry | default: page.industry %}
+      {% if industry %}
       <span class="badge badge-industry">
         <i data-lucide="building-2"></i>
-        {{ page.industry }}
+        {{ industry }}
       </span>
       {% endif %}
-      {% if page.complexity %}
-      <span class="badge badge-complexity badge-complexity-{{ page.complexity | downcase }}">
-        {{ page.complexity }} Complexity
+      {% assign complexity = parent.complexity | default: page.complexity %}
+      {% if complexity %}
+      <span class="badge badge-complexity badge-complexity-{{ complexity | downcase }}">
+        {{ complexity }} Complexity
       </span>
       {% endif %}
-      <span class="badge badge-status badge-status-{{ page.status }}">
-        {% if page.status == 'detailed' %}
+      <span class="badge badge-status badge-status-{{ parent.status | default: page.status }}">
+        {% assign st = parent.status | default: page.status %}
+        {% if st == 'detailed' %}
           <i data-lucide="check-circle"></i>
         {% else %}
           <i data-lucide="flask-conical"></i>
         {% endif %}
-        {{ page.status | capitalize }}
+        {{ st | capitalize }}
       </span>
     </div>
   </div>
@@ -46,35 +51,36 @@ layout: default
 <div class="uc-content-area">
   <div class="container">
     {% assign base_url = '/use-cases/' | append: page.slug | append: '/' %}
-    {% assign sibling_pages = site.pages | where: "slug", page.slug %}
 
     <nav class="uc-tabs" role="tablist">
       <a href="{{ base_url | relative_url }}" class="uc-tab" role="tab">
         <i data-lucide="file-text"></i>
         Use Case
       </a>
-      {% for sibling in sibling_pages %}
-        {% if sibling.detail_type == "solution-design" %}
-        <a href="{{ base_url | append: 'solution-design/' | relative_url }}" class="uc-tab {% if page.detail_type == 'solution-design' %}uc-tab-active{% endif %}" role="tab">
-          <i data-lucide="puzzle"></i> Solution Design
-        </a>
-        {% endif %}
-        {% if sibling.detail_type == "implementation-guide" %}
-        <a href="{{ base_url | append: 'implementation-guide/' | relative_url }}" class="uc-tab {% if page.detail_type == 'implementation-guide' %}uc-tab-active{% endif %}" role="tab">
-          <i data-lucide="wrench"></i> Implementation
-        </a>
-        {% endif %}
-        {% if sibling.detail_type == "evaluation" %}
-        <a href="{{ base_url | append: 'evaluation/' | relative_url }}" class="uc-tab {% if page.detail_type == 'evaluation' %}uc-tab-active{% endif %}" role="tab">
-          <i data-lucide="bar-chart-3"></i> Evaluation
-        </a>
-        {% endif %}
-        {% if sibling.detail_type == "references" %}
-        <a href="{{ base_url | append: 'references/' | relative_url }}" class="uc-tab {% if page.detail_type == 'references' %}uc-tab-active{% endif %}" role="tab">
-          <i data-lucide="bookmark"></i> References
-        </a>
-        {% endif %}
-      {% endfor %}
+      {% if parent.has_solution_design %}
+      <a href="{{ base_url | append: 'solution-design/' | relative_url }}" class="uc-tab {% if page.detail_type == 'solution-design' %}uc-tab-active{% endif %}" role="tab">
+        <i data-lucide="puzzle"></i>
+        Solution Design
+      </a>
+      {% endif %}
+      {% if parent.has_implementation_guide %}
+      <a href="{{ base_url | append: 'implementation-guide/' | relative_url }}" class="uc-tab {% if page.detail_type == 'implementation-guide' %}uc-tab-active{% endif %}" role="tab">
+        <i data-lucide="wrench"></i>
+        Implementation
+      </a>
+      {% endif %}
+      {% if parent.has_evaluation %}
+      <a href="{{ base_url | append: 'evaluation/' | relative_url }}" class="uc-tab {% if page.detail_type == 'evaluation' %}uc-tab-active{% endif %}" role="tab">
+        <i data-lucide="bar-chart-3"></i>
+        Evaluation
+      </a>
+      {% endif %}
+      {% if parent.has_references %}
+      <a href="{{ base_url | append: 'references/' | relative_url }}" class="uc-tab {% if page.detail_type == 'references' %}uc-tab-active{% endif %}" role="tab">
+        <i data-lucide="bookmark"></i>
+        References
+      </a>
+      {% endif %}
     </nav>
 
     <article class="uc-body prose">
