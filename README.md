@@ -60,6 +60,7 @@ All use cases follow the same 5-file structure. Templates are in [`_templates/`]
 | UC-056  | [Autonomous Telecom Network Operations and Self-Healing with Agentic AI](industry-specific/UC-056-telecom-autonomous-network-operations-agentic-ai/use-case.md) | Industry-Specific | Telecommunications | High | `research` |
 | UC-057  | [Autonomous Manufacturing Quality Inspection and Defect Remediation with Agentic AI Vision Systems](industry-specific/UC-057-manufacturing-autonomous-quality-inspection-agentic-ai-vision/use-case.md) | Industry-Specific | Manufacturing | High | `research` |
 | UC-058  | [Autonomous Dynamic Pricing and Revenue Optimization with Agentic AI](industry-specific/UC-058-autonomous-dynamic-pricing-revenue-optimization-agentic-ai/use-case.md) | Industry-Specific | Cross-Industry (Retail, E-Commerce, Airlines, Hospitality, Ride-Sharing) | High | `research` |
+| UC-059  | [Autonomous Clinical Trial Patient Matching and Recruitment with Agentic AI](industry-specific/UC-059-clinical-trial-patient-matching-recruitment-agentic-ai/use-case.md) | Industry-Specific | Pharmaceutical / Life Sciences | High | `research` |
 
 ## Numbering Convention
 
