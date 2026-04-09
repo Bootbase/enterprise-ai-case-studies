@@ -8,7 +8,7 @@
 | **Category**     | Workflow Automation           |
 | **Industry**     | Cross-Industry (Manufacturing, Retail, E-Commerce, Financial Services, Technology, Professional Services) |
 | **Complexity**   | High                         |
-| **Status**       | `research`                   |
+| **Status**       | `detailed`                   |
 
 ---
 
