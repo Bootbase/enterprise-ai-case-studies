@@ -2,21 +2,12 @@
 layout: default
 ---
 
-{% assign uc_slug = page.slug %}
-{% assign uc_page = nil %}
-{% for uc in site.use_cases %}
-  {% if uc.slug == uc_slug and uc.url contains "index" or uc.uc_id == page.uc_id and uc.layout == "use-case" %}
-    {% assign uc_page = uc %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-
 <div class="uc-hero">
   <div class="container">
     <div class="uc-breadcrumb">
       <a href="{{ '/' | relative_url }}">Catalog</a>
       <i data-lucide="chevron-right"></i>
-      <a href="{{ '/#' | append: page.category | downcase | replace: ' ', '-' | replace: '&', 'and' | relative_url }}">{{ page.category }}</a>
+      <span>{{ page.category }}</span>
       <i data-lucide="chevron-right"></i>
       <a href="{{ '/use-cases/' | append: page.slug | append: '/' | relative_url }}">{{ page.uc_id }}</a>
       <i data-lucide="chevron-right"></i>
@@ -40,40 +31,34 @@ layout: default
 
 <div class="uc-content-area">
   <div class="container">
-    <!-- Tab navigation -->
+    {% assign base_url = '/use-cases/' | append: page.slug | append: '/' %}
+    {% assign sibling_pages = site.pages | where: "slug", page.slug %}
+
     <nav class="uc-tabs" role="tablist">
-      <a href="{{ '/use-cases/' | append: page.slug | append: '/' | relative_url }}" class="uc-tab" role="tab">
+      <a href="{{ base_url | relative_url }}" class="uc-tab" role="tab">
         <i data-lucide="file-text"></i>
         Use Case
       </a>
-      {% assign base = '/use-cases/' | append: page.slug | append: '/' %}
-      {% assign sd_url = base | append: 'solution-design/' %}
-      {% assign ig_url = base | append: 'implementation-guide/' %}
-      {% assign ev_url = base | append: 'evaluation/' %}
-      {% assign rf_url = base | append: 'references/' %}
-
-      {% for uc in site.use_cases %}
-        {% if uc.slug == page.slug %}
-          {% if uc.detail_type == "solution-design" %}
-            <a href="{{ sd_url | relative_url }}" class="uc-tab {% if page.detail_type == 'solution-design' %}uc-tab-active{% endif %}" role="tab">
-              <i data-lucide="puzzle"></i> Solution Design
-            </a>
-          {% endif %}
-          {% if uc.detail_type == "implementation-guide" %}
-            <a href="{{ ig_url | relative_url }}" class="uc-tab {% if page.detail_type == 'implementation-guide' %}uc-tab-active{% endif %}" role="tab">
-              <i data-lucide="wrench"></i> Implementation
-            </a>
-          {% endif %}
-          {% if uc.detail_type == "evaluation" %}
-            <a href="{{ ev_url | relative_url }}" class="uc-tab {% if page.detail_type == 'evaluation' %}uc-tab-active{% endif %}" role="tab">
-              <i data-lucide="bar-chart-3"></i> Evaluation
-            </a>
-          {% endif %}
-          {% if uc.detail_type == "references" %}
-            <a href="{{ rf_url | relative_url }}" class="uc-tab {% if page.detail_type == 'references' %}uc-tab-active{% endif %}" role="tab">
-              <i data-lucide="bookmark"></i> References
-            </a>
-          {% endif %}
+      {% for sibling in sibling_pages %}
+        {% if sibling.detail_type == "solution-design" %}
+        <a href="{{ base_url | append: 'solution-design/' | relative_url }}" class="uc-tab {% if page.detail_type == 'solution-design' %}uc-tab-active{% endif %}" role="tab">
+          <i data-lucide="puzzle"></i> Solution Design
+        </a>
+        {% endif %}
+        {% if sibling.detail_type == "implementation-guide" %}
+        <a href="{{ base_url | append: 'implementation-guide/' | relative_url }}" class="uc-tab {% if page.detail_type == 'implementation-guide' %}uc-tab-active{% endif %}" role="tab">
+          <i data-lucide="wrench"></i> Implementation
+        </a>
+        {% endif %}
+        {% if sibling.detail_type == "evaluation" %}
+        <a href="{{ base_url | append: 'evaluation/' | relative_url }}" class="uc-tab {% if page.detail_type == 'evaluation' %}uc-tab-active{% endif %}" role="tab">
+          <i data-lucide="bar-chart-3"></i> Evaluation
+        </a>
+        {% endif %}
+        {% if sibling.detail_type == "references" %}
+        <a href="{{ base_url | append: 'references/' | relative_url }}" class="uc-tab {% if page.detail_type == 'references' %}uc-tab-active{% endif %}" role="tab">
+          <i data-lucide="bookmark"></i> References
+        </a>
         {% endif %}
       {% endfor %}
     </nav>

@@ -39,15 +39,15 @@ description: >-
 
 ### Step 1 — Find the next target
 
-Read `use-cases/README.md` and find the FIRST row in the Use Case Index table with status `research`. If no rows have status `research`, report "No use cases pending research completion" and stop.
+Read `docs/use-cases/README.md` and find the FIRST row in the Use Case Index table with status `research`. If no rows have status `research`, report "No use cases pending research completion" and stop.
 
 ### Step 2 — Read the research brief
 
-Navigate to that use case's folder and read `use-case.md`. Understand the problem, domain, constraints, and success criteria. This is the research brief.
+Navigate to that use case's folder (e.g., `docs/use-cases/{category-dir}/UC-NNN-slug/`) and read `index.md`. Understand the problem, domain, constraints, and success criteria. This is the research brief.
 
 ### Step 3 — Read the templates
 
-Read all 4 templates in `use-cases/_templates/` for structure reference:
+Read all 4 templates in `.agents/templates/` for structure reference:
 - `solution-design.md`
 - `implementation-guide.md`
 - `evaluation.md`
@@ -71,7 +71,7 @@ Use the templates for structure but shift the emphasis per the File Emphasis tab
 
 #### solution-design.md
 
-Emphasize:
+Place file at `docs/use-cases/{category-dir}/UC-NNN-slug/solution-design.md`. Emphasize:
 - **Agent pattern** — Which pattern (ReAct, plan-and-execute, multi-agent orchestrator-worker, RAG pipeline, hybrid) and WHY it fits this problem. Most important section.
 - **LLM role** — What the LLM does at each step: extraction, reasoning, classification, generation, decision-making. Be specific about which steps need AI and which don't.
 - **Tool/function design** — What tools the agent calls, what they return, how they connect to domain systems. This is where AI meets the real world.
@@ -79,10 +79,11 @@ Emphasize:
 - **Human-in-the-loop** — Where humans stay in the loop, what triggers escalation, how confidence thresholds are set.
 - **Data flow through the AI** — Clear diagram showing what data enters the LLM, what comes out, what happens next.
 - Keep infra sections minimal — just name the services, don't elaborate.
+- Include Jekyll front matter at the top (layout: use-case-detail, etc.)
 
 #### implementation-guide.md
 
-Emphasize:
+Place file at `docs/use-cases/{category-dir}/UC-NNN-slug/implementation-guide.md`. Emphasize:
 - **LLM connection and configuration** — Model selection, temperature, token limits, structured output setup.
 - **Agent definition** — Actual agent code: system prompt, tool bindings, orchestration logic. Use real framework APIs (e.g., `ChatCompletionAgent()`, `StateGraph()`, `kernel.add_plugin()`).
 - **Tool implementations** — Functions the agent calls to interact with domain systems. Show the AI-to-real-world interface.
@@ -90,26 +91,30 @@ Emphasize:
 - **Orchestration flow** — How multiple steps/agents coordinate: state management, handoffs, retry logic.
 - **Evaluation and testing of AI quality** — How to measure if AI output is correct (AI-specific, not generic unit tests).
 - Skip or minimize: Dockerfiles, CI/CD, monitoring dashboards, project scaffolding, infra setup.
+- Include Jekyll front matter at the top (layout: use-case-detail, etc.)
 
 #### evaluation.md
 
-Emphasize:
+Place file at `docs/use-cases/{category-dir}/UC-NNN-slug/evaluation.md`. Emphasize:
 - Real metrics from published case studies (with citations)
 - Where the AI excels vs. where it still struggles
 - Failure modes specific to the AI approach (hallucination, edge cases, confidence calibration)
 - Lessons learned about prompt engineering, model selection, agent patterns
-- ROI calculation grounded in numbers from use-case.md
+- ROI calculation grounded in numbers from index.md
 - What surprised teams during implementation
+- Include Jekyll front matter at the top (layout: use-case-detail, etc.)
 
 #### references.md
 
+Place file at `docs/use-cases/{category-dir}/UC-NNN-slug/references.md`. Contents:
 - Every claim in the other 3 files must be traceable here
 - Prioritize: case studies, vendor docs for the AI tools used, GitHub repos with working code, conference talks
 - Verify URLs are real (do not fabricate)
+- Include Jekyll front matter at the top (layout: use-case-detail, etc.)
 
 ### Step 6 — Update status
 
-In `use-cases/README.md`, change the status from `research` to `detailed`. Also update the Status field in `use-case.md` metadata.
+In `docs/use-cases/README.md`, change the status from `research` to `detailed`. Also update the status field in `index.md` front matter and the `has_*` flags to `true` for each file you created.
 
 ---
 
@@ -119,6 +124,7 @@ In `use-cases/README.md`, change the status from `research` to `detailed`. Also 
 - **Use REAL tools, APIs, frameworks** — nothing made up. Code snippets must use real SDK methods.
 - **Prioritize Azure-first** but always mention open-source alternatives.
 - **Every metric must cite a source** in references.md. If real data isn't available, say "estimated" and explain the basis.
-- **Do not modify use-case.md content** beyond updating the Status field.
-- **Do not create files outside the use case folder** (except editing README.md status).
+- **Do not modify index.md content** beyond updating the status field and has_* flags in front matter.
+- **All detail files go in the same folder as index.md** (e.g., `docs/use-cases/{category-dir}/UC-NNN-slug/`). Each must have Jekyll front matter.
+- **Only edit README.md status** (except for creating the detail files).
 - **No `{curly brace}` placeholders may remain** in any output file.

@@ -26,7 +26,7 @@ description: >-
 
 ### Step 1 — Inventory
 
-Read `use-cases/README.md` and `use-cases/_templates/use-case.md`.
+Read `docs/use-cases/README.md` and `.agents/templates/use-case.md`.
 
 Parse the Use Case Index table. List every existing use case by ID, title, category, and industry. Identify which categories and industries are already covered.
 
@@ -38,19 +38,20 @@ Prioritize use cases with published production deployments, concrete metrics, an
 
 ### Step 3 — Assign ID & Category
 
-Pick the correct category from README.md's category table. Use the LOWEST available ID in that category's range. Create the folder: `use-cases/{category}/UC-{NNN}-{slug}/`
+Pick the correct category from README.md's category table. Use the LOWEST available ID in that category's range (001–099 for Document Processing, 100–199 for Customer Service, 200–299 for Workflow Automation, 300–399 for Code & DevOps, 400–499 for Knowledge Management, 500–999 for Industry-Specific). Create the folder: `docs/use-cases/{category-dir}/UC-{NNN}-{slug}/` where `{category-dir}` is the kebab-case category name (e.g., `document-processing`, `customer-service`, `workflow-automation`, `code-and-devops`, `knowledge-management`, `industry-specific`).
 
-### Step 4 — Write use-case.md
+### Step 4 — Write index.md
 
-Use the template in `use-cases/_templates/use-case.md`. Fill in EVERY section with concrete, researched content: real companies, real numbers, real pain points, real systems. Set status to `research`. No `{placeholder}` text may remain.
+Use the template in `.agents/templates/use-case.md` (note: file is now called `index.md`, not `use-case.md`). Fill in EVERY section with concrete, researched content: real companies, real numbers, real pain points, real systems. Set status to `research`. No `{placeholder}` text may remain.
 
 ### Step 5 — Update index
 
-Add a row to the Use Case Index table in `use-cases/README.md`, matching the existing table format exactly.
+Add a row to the Use Case Index table in `docs/use-cases/README.md`, matching the existing table format exactly.
 
 ## Gotchas
 
-- **Do NOT create solution-design.md, implementation-guide.md, evaluation.md, or references.md** — only use-case.md. Use the `research-complete` skill later to populate those.
+- **Do NOT create solution-design.md, implementation-guide.md, evaluation.md, or references.md** — only index.md. Use the `research-complete` skill later to populate those.
 - **Use REAL company names, products, tools, and metrics** — not made-up ones. Cite sources inline (e.g., "700K reports/year (FDA FAERS)").
 - **If solid real-world data is scarce**, state that explicitly and use the best available estimates.
 - **Every template placeholder must be replaced** — no `{curly brace}` text may remain in the output.
+- **Use case folders are organized by category**: `docs/use-cases/{category-dir}/UC-NNN-slug/`. The category subdirectory must match the `category_dir` in front matter.

@@ -7,7 +7,7 @@ layout: default
     <div class="uc-breadcrumb">
       <a href="{{ '/' | relative_url }}">Catalog</a>
       <i data-lucide="chevron-right"></i>
-      <a href="{{ '/#' | append: page.category_dir | relative_url }}">{{ page.category }}</a>
+      <span>{{ page.category }}</span>
       <i data-lucide="chevron-right"></i>
       <span>{{ page.uc_id }}</span>
     </div>
@@ -39,7 +39,6 @@ layout: default
 
 <div class="uc-content-area">
   <div class="container">
-    <!-- Tab navigation -->
     <nav class="uc-tabs" role="tablist">
       <a href="{{ page.url | relative_url }}" class="uc-tab uc-tab-active" role="tab">
         <i data-lucide="file-text"></i>

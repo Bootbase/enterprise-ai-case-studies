@@ -9,10 +9,10 @@ title: Enterprise AI Use Cases Catalog
       <h1 class="hero-title">Enterprise AI<br>Use Case Catalog</h1>
       <p class="hero-subtitle">A curated collection of real-world agentic AI use cases — researched, designed, and documented end-to-end by BootbaseBV.</p>
       <div class="hero-stats">
-        {% assign total = site.use_cases | where_exp: "uc", "uc.layout == 'use-case'" | size %}
-        {% assign detailed = site.use_cases | where_exp: "uc", "uc.layout == 'use-case' and uc.status == 'detailed'" | size %}
-        {% assign research = site.use_cases | where_exp: "uc", "uc.layout == 'use-case' and uc.status == 'research'" | size %}
-        {% assign categories_list = site.use_cases | where_exp: "uc", "uc.layout == 'use-case'" | map: "category" | uniq %}
+        {% assign all_uc = site.pages | where: "layout", "use-case" %}
+        {% assign total = all_uc | size %}
+        {% assign detailed = all_uc | where: "status", "detailed" | size %}
+        {% assign categories_list = all_uc | map: "category" | uniq %}
         <div class="stat">
           <span class="stat-number">{{ total }}</span>
           <span class="stat-label">Use Cases</span>
@@ -37,7 +37,7 @@ title: Enterprise AI Use Cases Catalog
         <label class="filter-label">Category</label>
         <div class="filter-chips" id="category-filters">
           <button class="chip chip-active" data-filter="all">All</button>
-          {% assign all_categories = site.use_cases | where_exp: "uc", "uc.layout == 'use-case'" | map: "category" | uniq | sort %}
+          {% assign all_categories = all_uc | map: "category" | uniq | sort %}
           {% for cat in all_categories %}
           <button class="chip" data-filter="{{ cat }}">{{ cat }}</button>
           {% endfor %}
@@ -68,7 +68,7 @@ title: Enterprise AI Use Cases Catalog
 <section class="catalog-section">
   <div class="container">
     <div class="card-grid" id="use-case-grid">
-      {% assign use_cases = site.use_cases | where_exp: "uc", "uc.layout == 'use-case'" | sort: "uc_id" %}
+      {% assign use_cases = all_uc | sort: "uc_id" %}
       {% for uc in use_cases %}
       <a href="{{ uc.url | relative_url }}" class="uc-card"
          data-category="{{ uc.category }}"
@@ -126,7 +126,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let activeCategory = 'all';
   let activeStatus = 'all';
 
-  // Category filter
   document.querySelectorAll('#category-filters .chip').forEach(btn => {
     btn.addEventListener('click', function() {
       document.querySelectorAll('#category-filters .chip').forEach(b => b.classList.remove('chip-active'));
@@ -136,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Status filter
   document.querySelectorAll('#status-filters .chip').forEach(btn => {
     btn.addEventListener('click', function() {
       document.querySelectorAll('#status-filters .chip').forEach(b => b.classList.remove('chip-active'));
@@ -146,13 +144,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Search
   searchInput.addEventListener('input', filterCards);
 
   function filterCards() {
     const query = searchInput.value.toLowerCase().trim();
     let visible = 0;
-
     cards.forEach(card => {
       const matchCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
       const matchStatus = activeStatus === 'all' || card.dataset.status === activeStatus;
@@ -161,7 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
         card.dataset.id.includes(query) ||
         card.dataset.industry.toLowerCase().includes(query) ||
         card.dataset.category.toLowerCase().includes(query);
-
       if (matchCategory && matchStatus && matchSearch) {
         card.style.display = '';
         visible++;
@@ -169,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.display = 'none';
       }
     });
-
     noResults.style.display = visible === 0 ? '' : 'none';
   }
 

@@ -10,9 +10,9 @@ This repo is a catalog of real-world enterprise AI use cases — each researched
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | Add a new use case                        | Read [.agents/skills/research-new/SKILL.md](.agents/skills/research-new/SKILL.md)             |
 | Detail an existing `research` use case    | Read [.agents/skills/research-complete/SKILL.md](.agents/skills/research-complete/SKILL.md)   |
-| Browse the use case index                 | Read [use-cases/README.md](use-cases/README.md)                                                |
-| Understand the file structure             | Read [use-cases/_templates/](use-cases/_templates/)                                            |
-| See reusable prompts (copy-paste format)  | Read [use-cases/PROMPT.md](use-cases/PROMPT.md)                                                |
+| Browse the use case index                 | Read [docs/use-cases/README.md](docs/use-cases/README.md)                                      |
+| Understand the file structure             | Read [.agents/templates/](.agents/templates/)                                                 |
+| See reusable prompts (copy-paste format)  | Read [docs/PROMPT.md](docs/PROMPT.md)                                                         |
 
 ## Use Case Lifecycle
 
@@ -24,7 +24,8 @@ research-new                     research-complete
 │ research │ ─────────────────▸│   detailed   │
 │          │                   │              │
 │ Files:   │                   │ Files:       │
-│ • use-case.md                │ • use-case.md (status updated)
+│ • docs/use-cases/{category}/  │ • docs/use-cases/{category}/
+│   UC-NNN-slug/index.md        │   UC-NNN-slug/index.md (status updated)
 │          │                   │ • solution-design.md
 │          │                   │ • implementation-guide.md
 │          │                   │ • evaluation.md
