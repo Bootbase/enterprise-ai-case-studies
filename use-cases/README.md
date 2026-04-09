@@ -33,7 +33,7 @@ A curated catalog of real-world agentic AI use cases — researched, designed, a
 | UC-032 | [Autonomous Legacy Code Modernization](code-and-devops/UC-032-autonomous-legacy-code-modernization-agentic-ai/) | Code & DevOps | Cross-Industry | `research` |
 | UC-040 | [Autonomous Knowledge Synthesis (Consulting Copilot)](knowledge-management/UC-040-autonomous-knowledge-synthesis-consulting-copilot/) | Knowledge Management | Consulting | `research` |
 | UC-041 | [Autonomous Regulatory Change Intelligence](knowledge-management/UC-041-autonomous-regulatory-change-intelligence-agentic-ai/) | Knowledge Management | Cross-Industry | `detailed` |
-| UC-042 | [Autonomous RFP and Proposal Response Generation](knowledge-management/UC-042-autonomous-rfp-proposal-response-agentic-ai/) | Knowledge Management | Cross-Industry | `research` |
+| UC-042 | [Autonomous RFP and Proposal Response Generation](knowledge-management/UC-042-autonomous-rfp-proposal-response-agentic-ai/) | Knowledge Management | Cross-Industry | `detailed` |
 | UC-050 | [Autonomous Pharma Adverse Event Processing](industry-specific/UC-050-pharma-adverse-event-processing/) | Industry-Specific | Pharmaceutical | `detailed` |
 | UC-051 | [Autonomous Insurance Claims Processing](industry-specific/UC-051-insurance-claims-multi-agent-processing/) | Industry-Specific | Insurance | `research` |
 | UC-052 | [Autonomous M&A Due Diligence (Legal AI)](industry-specific/UC-052-legal-ma-due-diligence-agentic-ai/) | Industry-Specific | Legal | `research` |

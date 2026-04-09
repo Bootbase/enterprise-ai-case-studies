@@ -8,7 +8,7 @@
 | **Category**     | Knowledge Management         |
 | **Industry**     | Cross-Industry               |
 | **Complexity**   | High                         |
-| **Status**       | `research`                   |
+| **Status**       | `detailed`                   |
 
 ---
 
