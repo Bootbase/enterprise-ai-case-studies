@@ -7,7 +7,7 @@ layout: default
 <div class="uc-hero">
   <div class="container">
     <div class="uc-breadcrumb">
-      <a href="{{ '/' | relative_url }}">Catalog</a>
+      <a href="{{ '/' | relative_url }}">Case Studies</a>
       <i data-lucide="chevron-right"></i>
       <span>{{ parent.category | default: page.category }}</span>
       <i data-lucide="chevron-right"></i>
@@ -46,7 +46,7 @@ layout: default
     <nav class="uc-tabs" role="tablist">
       <a href="{{ base_url | relative_url }}" class="uc-tab" role="tab">
         <i data-lucide="file-text"></i>
-        Use Case
+        Case Study
       </a>
       {% if parent.has_solution_design %}
       <a href="{{ base_url | append: 'solution-design/' | relative_url }}" class="uc-tab {% if page.detail_type == 'solution-design' %}uc-tab-active{% endif %}" role="tab">

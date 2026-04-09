@@ -136,13 +136,13 @@ def step4_git():
     print(result.stdout)
 
     msg = (
-        "feat: add GitHub Pages site with Bootbase branding\n\n"
-        "- Jekyll site in docs/ with custom domain (enterprise-ai-use-cases.bootbase.be)\n"
+        "feat: add Enterprise AI Case Studies site\n\n"
+        "- Jekyll site in docs/ with custom domain (enterprise-ai-case-studies.bootbase.be)\n"
         "- Renumbered IDs: 100 slots per category (001-099, 100-199, ..., 500-999)\n"
         "- Use cases organized by category subdirectory\n"
         "- Filterable card-grid homepage with search\n"
         "- Tabbed detail views for solution design, implementation, evaluation, references\n"
-        "- GitHub Actions workflow for auto-deploy on push to main\n"
+        "- GitHub Pages deployment from the docs/ directory\n"
         "- Updated skills, templates, AGENTS.md for new structure\n"
         "- All markdown files include Jekyll front matter (no intermediate build step)"
     )
@@ -151,17 +151,17 @@ def step4_git():
     if confirm == "y":
         subprocess.run(["git", "commit", "-m", msg], check=True)
         subprocess.run(["git", "push", "origin", "main"], check=True)
-        print("\n  Pushed! Site will deploy via GitHub Actions.")
-        print("  Check: https://enterprise-ai-use-cases.bootbase.be/")
+        print("\n  Pushed! Site will deploy via GitHub Pages.")
+        print("  Check: https://enterprise-ai-case-studies.bootbase.be/")
     else:
         print("  Skipped. Run manually:")
-        print("    git commit -m 'feat: add GitHub Pages site'")
+        print("    git commit -m 'feat: add Enterprise AI Case Studies site'")
         print("    git push origin main")
 
 
 def main():
     print("=" * 60)
-    print("  Enterprise AI Use Cases — Migration & Deploy")
+    print("  Enterprise AI Case Studies — Migration & Deploy")
     print("=" * 60)
     print()
 

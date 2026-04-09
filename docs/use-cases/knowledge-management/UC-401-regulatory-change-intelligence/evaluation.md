@@ -16,7 +16,7 @@ permalink: /use-cases/UC-401-regulatory-change-intelligence/evaluation/
 
 ## Evaluation Overview
 
-The evidence base for AI in regulatory change management draws from three categories: (1) published production metrics from commercial RegTech platforms (CUBE, AscentAI, Wolters Kluwer) that have deployed at major financial institutions, (2) academic research on regulatory NLP with benchmark precision/recall scores from the RegNLP 2025 workshop at COLING, and (3) industry cost-of-compliance surveys (CUBE, Thomson Reuters, Deloitte) that quantify the baseline manual process. Unlike some enterprise AI use cases, the regulatory domain has both strong academic benchmarks and production deployments with published results.
+The evidence base for AI in regulatory change management draws from three categories: (1) published production metrics from commercial RegTech platforms (CUBE, AscentAI, Wolters Kluwer) that have deployed at major financial institutions, (2) academic research on regulatory NLP with benchmark precision/recall scores from the RegNLP 2025 workshop at COLING, and (3) industry cost-of-compliance surveys (CUBE, Thomson Reuters, Deloitte) that quantify the baseline manual process. Unlike some AI deployment domains, the regulatory domain has both strong academic benchmarks and production deployments with published results.
 
 ---
 

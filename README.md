@@ -1,16 +1,16 @@
-# Agentic AI Use Cases
+# Enterprise AI Case Studies
 
-A catalog of real-world enterprise AI integration use cases — each researched, designed, and documented end-to-end.
+A catalog of real-world enterprise AI case studies, each researched, designed, and documented end-to-end.
 
 ## How to Use
 
-1. **Browse** the index below to find use cases by category
-2. **Read** a use case folder to understand the problem, solution, implementation, and results
-3. **Add** a new use case by running the prompt in [PROMPT.md](PROMPT.md)
+1. **Browse** the index below to find case studies by category
+2. **Read** a case study folder to understand the problem, solution, implementation, and results
+3. **Add** a new case study by running the prompt in [PROMPT.md](PROMPT.md)
 
 ## Templates
 
-All use cases follow the same 5-file structure. Templates are in [`_templates/`](./_templates/):
+All case studies follow the same 5-file structure. Templates are in [`_templates/`](./_templates/):
 
 | File                     | Purpose                                           |
 |--------------------------|---------------------------------------------------|
@@ -31,9 +31,9 @@ All use cases follow the same 5-file structure. Templates are in [`_templates/`]
 | Knowledge Management    | `knowledge-management/` | Enterprise search, RAG, company copilots         |
 | Industry-Specific       | `industry-specific/`    | Finance, healthcare, legal, retail, telecom, manufacturing |
 
-## Use Case Index
+## Case Study Index
 
-<!-- Add entries as use cases are created -->
+<!-- Add entries as case studies are created -->
 
 | ID      | Title | Category | Industry | Complexity | Status |
 |---------|-------|----------|----------|------------|--------|

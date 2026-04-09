@@ -1,20 +1,25 @@
 ---
 layout: default
-title: Enterprise AI Use Cases Catalog
+title: Catalog
 ---
 
 <section class="hero">
-  <div class="container">
+  <div class="container hero-shell">
     <div class="hero-content">
-      <h1 class="hero-title">How AI Solves Real Problems<br>at Enterprise Scale</h1>
-      <p class="hero-subtitle">Documented use cases showing how agentic AI is applied to complex business processes — covering solution design, implementation, and evaluation.</p>
+      <span class="hero-kicker">Documented enterprise AI deployments</span>
+      <h1 class="hero-title">Enterprise AI Case Studies</h1>
+      <p class="hero-subtitle">A curated library of published case studies showing how agentic AI systems are framed, designed, implemented, and evaluated in real enterprise environments.</p>
+      <div class="hero-actions">
+        <a href="#catalog" class="btn btn-primary">Browse Case Studies</a>
+        <a href="https://github.com/Bootbase/enterprise-ai-case-studies" class="btn btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
       <div class="hero-stats">
         {% assign all_uc = site.pages | where: "layout", "use-case" | where: "status", "detailed" %}
         {% assign total = all_uc | size %}
         {% assign categories_list = all_uc | map: "category" | uniq %}
         <div class="stat">
           <span class="stat-number">{{ total }}</span>
-          <span class="stat-label">Use Cases</span>
+          <span class="stat-label">Published</span>
         </div>
         <div class="stat">
           <span class="stat-number">{{ categories_list | size }}</span>
@@ -22,6 +27,27 @@ title: Enterprise AI Use Cases Catalog
         </div>
       </div>
     </div>
+    <aside class="hero-panel" aria-label="Included in each case study">
+      <span class="hero-panel-label">Inside each case study</span>
+      <ul class="hero-panel-list">
+        <li>
+          <strong>Business context</strong>
+          <span>The operational problem, constraints, and target outcomes.</span>
+        </li>
+        <li>
+          <strong>System design</strong>
+          <span>Architecture, agent patterns, tooling, and workflow design.</span>
+        </li>
+        <li>
+          <strong>Implementation detail</strong>
+          <span>Practical build guidance, integration points, and delivery steps.</span>
+        </li>
+        <li>
+          <strong>Evidence and references</strong>
+          <span>Evaluation criteria, results, and the primary sources behind each study.</span>
+        </li>
+      </ul>
+    </aside>
   </div>
 </section>
 
@@ -41,7 +67,7 @@ title: Enterprise AI Use Cases Catalog
       <div class="filter-group">
         <div class="search-box">
           <i data-lucide="search"></i>
-          <input type="text" id="search-input" placeholder="Search use cases..." autocomplete="off">
+          <input type="text" id="search-input" placeholder="Search titles, sectors, or IDs..." autocomplete="off">
         </div>
       </div>
     </div>
@@ -53,6 +79,11 @@ title: Enterprise AI Use Cases Catalog
     <div class="card-grid" id="use-case-grid">
       {% assign use_cases = all_uc | sort: "uc_id" %}
       {% for uc in use_cases %}
+      {% assign doc_count = 1 %}
+      {% if uc.has_solution_design %}{% assign doc_count = doc_count | plus: 1 %}{% endif %}
+      {% if uc.has_implementation_guide %}{% assign doc_count = doc_count | plus: 1 %}{% endif %}
+      {% if uc.has_evaluation %}{% assign doc_count = doc_count | plus: 1 %}{% endif %}
+      {% if uc.has_references %}{% assign doc_count = doc_count | plus: 1 %}{% endif %}
       <a href="{{ uc.url | relative_url }}" class="uc-card"
          data-category="{{ uc.category }}"
          data-industry="{{ uc.industry }}"
@@ -60,6 +91,7 @@ title: Enterprise AI Use Cases Catalog
          data-id="{{ uc.uc_id | downcase }}">
         <div class="card-header">
           <span class="card-id">{{ uc.uc_id }}</span>
+          <span class="card-depth">{{ doc_count }} sections</span>
         </div>
         <h3 class="card-title">{{ uc.title }}</h3>
         <p class="card-summary">{{ uc.summary }}</p>
@@ -77,6 +109,7 @@ title: Enterprise AI Use Cases Catalog
           {% if uc.has_implementation_guide %}<span class="doc-indicator"><i data-lucide="wrench"></i></span>{% endif %}
           {% if uc.has_evaluation %}<span class="doc-indicator"><i data-lucide="bar-chart-3"></i></span>{% endif %}
           {% if uc.has_references %}<span class="doc-indicator"><i data-lucide="bookmark"></i></span>{% endif %}
+          <span class="card-link-hint">Open case study</span>
         </div>
       </a>
       {% endfor %}
@@ -84,7 +117,7 @@ title: Enterprise AI Use Cases Catalog
 
     <div class="no-results" id="no-results" style="display: none;">
       <i data-lucide="search-x"></i>
-      <p>No use cases match your filters.</p>
+      <p>No case studies match the current filters.</p>
       <button class="btn-reset" onclick="resetFilters()">Reset filters</button>
     </div>
   </div>

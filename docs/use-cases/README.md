@@ -1,6 +1,6 @@
-# Enterprise AI Use Cases
+# Enterprise AI Case Studies
 
-A catalog of real-world agentic AI use cases — researched, designed, and documented end-to-end. Each use case follows a lifecycle: `research` → `detailed`.
+A catalog of real-world agentic AI case studies, researched, designed, and documented end-to-end. Each case study follows a lifecycle: `research` → `detailed`.
 
 ---
 
@@ -44,7 +44,7 @@ docs/use-cases/
 
 ---
 
-## Use Case Categories & ID Ranges
+## Case Study Categories & ID Ranges
 
 | Category | ID Range | Directory |
 |----------|----------|-----------|
@@ -57,7 +57,7 @@ docs/use-cases/
 
 ---
 
-## Use Case Index
+## Case Study Index
 
 | ID | Title | Category | Industry | Status | Directory |
 |---|-------|----------|----------|--------|-----------|
@@ -94,6 +94,6 @@ docs/use-cases/
 
 This README is excluded from Jekyll builds and serves as the index for automated workflows.
 
-- To add a new use case, see [.agents/skills/research-new/SKILL.md](../../.agents/skills/research-new/SKILL.md)
-- To detail an existing `research` use case, see [.agents/skills/research-complete/SKILL.md](../../.agents/skills/research-complete/SKILL.md)
+- To add a new case study, see [.agents/skills/research-new/SKILL.md](../../.agents/skills/research-new/SKILL.md)
+- To detail an existing `research` case study, see [.agents/skills/research-complete/SKILL.md](../../.agents/skills/research-complete/SKILL.md)
 - To understand the template structure, see [.agents/templates/](../../.agents/templates/)
