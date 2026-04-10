@@ -366,10 +366,11 @@ def _stage_index_delta(config: AppConfig, relative_path: str) -> None:
     try:
         apply_patch_to_index(config.root, patch_text)
     except GitError as exc:
-        raise RunnerError(
+        warn(
             f"Could not isolate {relative_path} changes from pre-existing edits; "
-            f"the generated delta overlaps with earlier uncommitted changes: {exc}"
-        ) from exc
+            f"staging the full file instead: {exc}"
+        )
+        stage_paths(config.root, [relative_path])
 
 
 def _run_phase(config: AppConfig, state: RunState, phase: Phase, skill_name: str, skill_args: str | None = None) -> bool | None:

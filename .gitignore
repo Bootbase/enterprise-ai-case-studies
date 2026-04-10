@@ -1,5 +1,6 @@
 .research-runner/
 .claude-research-runner/
+.agents/worktrees/
 __pycache__/
 *.py[cod]
 
