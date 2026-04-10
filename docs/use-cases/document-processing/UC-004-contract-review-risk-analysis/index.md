@@ -7,13 +7,13 @@ category_dir: "document-processing"
 category_icon: "file-text"
 industry: "Cross-Industry (Legal, Financial Services, Technology, Manufacturing)"
 complexity: "High"
-status: "research"
+status: "detailed"
 summary: "Enterprise legal and procurement teams review thousands of commercial contracts annually — NDAs, MSAs, vendor agreements, licensing deals — checking each against company playbooks, regulatory requirements, and jurisdictional rules. Manual review is slow, inconsistent, and creates a bottleneck that delays revenue and exposes the business to undetected risk."
 slug: "UC-004-contract-review-risk-analysis"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-004-contract-review-risk-analysis/
 ---
 

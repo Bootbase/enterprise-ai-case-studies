@@ -67,7 +67,7 @@ docs/use-cases/
 | UC-001 | Autonomous AP Invoice Processing | Document Processing | Cross-Industry | detailed | `document-processing/UC-001-ap-invoice-processing/` |
 | UC-002 | Autonomous Mortgage Loan Document Processing | Document Processing | Financial Services | detailed | `document-processing/UC-002-mortgage-loan-processing/` |
 | UC-003 | Autonomous Customs Declaration and Trade Document Processing | Document Processing | Logistics / Global Trade | detailed | `document-processing/UC-003-customs-trade-document-processing/` |
-| UC-004 | Autonomous Contract Review and Risk Analysis | Document Processing | Cross-Industry | research | `document-processing/UC-004-contract-review-risk-analysis/` |
+| UC-004 | Autonomous Contract Review and Risk Analysis | Document Processing | Cross-Industry | detailed | `document-processing/UC-004-contract-review-risk-analysis/` |
 | UC-100 | Autonomous Customer Service Resolution | Customer Service | Cross-Industry | detailed | `customer-service/UC-100-customer-service-resolution/` |
 | UC-101 | Autonomous IT Service Desk Resolution | Customer Service | Cross-Industry | research | `customer-service/UC-101-it-service-desk-resolution/` |
 | UC-200 | Autonomous Freight Logistics Orchestration | Workflow Automation | Logistics / Transportation | research | `workflow-automation/UC-200-freight-logistics-orchestration/` |
