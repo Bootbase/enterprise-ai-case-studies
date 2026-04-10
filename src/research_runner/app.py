@@ -379,6 +379,8 @@ def _run_phase(config: AppConfig, state: RunState, phase: Phase, skill_name: str
         state.session_started = True
     if resume_session and state.session_id is None:
         state.session_id = _recover_session_id_for_phase(config, state, phase_name)
+        if state.session_id is None:
+            resume_session = False
 
     command_text = config.backend.build_prompt(config.root, skill_name, skill_args)
     state.current_phase = phase
