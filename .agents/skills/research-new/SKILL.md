@@ -92,7 +92,7 @@ Add one row to `docs/use-cases/README.md`, matching the existing table format ex
 
 ### Step 6 — Verify Links Before Finishing
 
-- If you include any URL in the generated markdown, it must be a clickable Markdown link. Do not leave bare `https://...` text in the document.
+- If you include any URL in the generated markdown, it must be a clickable Markdown link. Do not leave bare URL text in the document.
 - Only link to local repository artifacts that already exist at commit time. Do not add "coming soon" file links.
 - Before you keep an external URL, open it and confirm it resolves to the content you are citing. Replace redirected or stale URLs with the final working page.
 - If a section does not need a link, omit the link instead of guessing.

@@ -264,16 +264,21 @@ def _validate_markdown_anchor(target_path: Path, fragment: str) -> None:
 
 
 def _validate_remote_url(url: str) -> None:
+    reachable_status_codes = {401, 403, 405, 429}
+
+    def _status_is_acceptable(status_code: int) -> bool:
+        return status_code < 400 or status_code in reachable_status_codes
+
     headers = {"User-Agent": "research-runner-link-check/1.0"}
     request = urllib_request.Request(url, method="HEAD", headers=headers)
     try:
         with urllib_request.urlopen(request, timeout=HTTP_TIMEOUT_SECONDS) as response:
             status_code = getattr(response, "status", 200)
-            if status_code >= 400:
+            if not _status_is_acceptable(status_code):
                 raise RuntimeError(f"URL returned HTTP {status_code}: {url}")
             return
     except urllib_error.HTTPError as exc:
-        if exc.code >= 400 and exc.code not in {405, 403}:
+        if not _status_is_acceptable(exc.code):
             raise RuntimeError(f"URL returned HTTP {exc.code}: {url}") from exc
     except urllib_error.URLError as exc:
         raise RuntimeError(f"Could not reach URL {url}: {exc.reason}") from exc
@@ -282,8 +287,11 @@ def _validate_remote_url(url: str) -> None:
     try:
         with urllib_request.urlopen(fallback, timeout=HTTP_TIMEOUT_SECONDS) as response:
             status_code = getattr(response, "status", 200)
-            if status_code >= 400:
+            if not _status_is_acceptable(status_code):
                 raise RuntimeError(f"URL returned HTTP {status_code}: {url}")
+    except urllib_error.HTTPError as exc:
+        if not _status_is_acceptable(exc.code):
+            raise RuntimeError(f"URL returned HTTP {exc.code}: {url}") from exc
     except urllib_error.URLError as exc:
         raise RuntimeError(f"Could not reach URL {url}: {exc.reason}") from exc
 

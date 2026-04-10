@@ -201,5 +201,5 @@ No `{placeholder}` text may remain.
 - If the evidence base is thin, say that directly and narrow the recommendation.
 - Focus on one strong reference architecture instead of listing every possible tool in the market.
 - The site publishes detailed case studies. Write for readers, not for the agent runtime.
-- Do not leave raw `https://...` text in markdown. Use clickable Markdown links everywhere a URL is shown.
+- Do not leave raw URL text in markdown. Use clickable Markdown links everywhere a URL is shown.
 - Do not leave "coming soon" links to files that do not exist yet.
