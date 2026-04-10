@@ -44,6 +44,7 @@ docs/use-cases/
     UC-509-clinical-trial-patient-matching/
     UC-510-agriculture-crop-protection/
     UC-511-insurance-underwriting-automation/
+    UC-512-construction-progress-monitoring/
 ```
 
 ---
@@ -95,6 +96,7 @@ docs/use-cases/
 | UC-509 | Autonomous Clinical Trial Patient Matching | Industry-Specific | Pharmaceutical | research | `industry-specific/UC-509-clinical-trial-patient-matching/` |
 | UC-510 | Autonomous Agricultural Crop Protection and Precision Treatment | Industry-Specific | Agriculture | detailed | `industry-specific/UC-510-agriculture-crop-protection/` |
 | UC-511 | Autonomous Property and Casualty Insurance Underwriting | Industry-Specific | Insurance | detailed | `industry-specific/UC-511-insurance-underwriting-automation/` |
+| UC-512 | Autonomous Construction Progress Monitoring and Delay Prediction | Industry-Specific | Construction | research | `industry-specific/UC-512-construction-progress-monitoring/` |
 
 ---
 
