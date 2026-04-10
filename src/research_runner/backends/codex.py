@@ -83,12 +83,12 @@ class CodexBackend(AgentBackend):
         log_path.parent.mkdir(parents=True, exist_ok=True)
         args = [
             self.agent_bin,
+            "exec",
             "--full-auto",
-            "-q",
             command,
         ]
 
-        info(f"Executing: {self.agent_bin} --full-auto -q <prompt>")
+        info(f"Executing: {self.agent_bin} exec --full-auto <prompt>")
         process = subprocess.Popen(
             args,
             cwd=root,
