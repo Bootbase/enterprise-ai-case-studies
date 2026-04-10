@@ -51,7 +51,4 @@ A single routine case takes 2–4 hours of specialist time from intake through s
 
 ## Key Documents
 
-- [Solution Design](./solution-design.md) — Multi-agent architecture, LangGraph orchestration, hybrid rule-based + LLM workflow
-- [Implementation Guide](./implementation-guide.md) — Python code patterns, Azure OpenAI integration, testing strategy
-- [Evaluation](./evaluation.md) — Baseline metrics, published vendor results, cost analysis, lessons learned
-- [References](./references.md) — Research briefs, case studies, technical documentation, links to code repositories
+This case study is still at `research` status. Detailed artifacts are not published yet.

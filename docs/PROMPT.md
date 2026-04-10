@@ -62,6 +62,9 @@ Rules:
 - Include `3–6` rows in the `Evidence Base` section.
 - If real-world data is scarce, say so directly and use the best available estimate.
 - Every template placeholder must be replaced.
+- If you include any URL, make it a clickable Markdown link.
+- Verify each external URL by opening it before you keep it in the document.
+- Never link to a local artifact that does not exist yet.
 ```
 
 ---
@@ -113,6 +116,9 @@ Rules:
 - Keep the tone direct and business-oriented; avoid hype and generic AI phrasing.
 - Cite the source for quantitative claims inline.
 - Every template placeholder must be replaced.
+- If you include any URL, make it a clickable Markdown link.
+- Verify each external URL by opening it before you keep it in the document.
+- Never link to a local artifact that does not exist yet.
 ```
 
 ---
@@ -162,6 +168,9 @@ Rules:
 - Every template placeholder must be replaced.
 - All detail files must be in `docs/use-cases/{category-dir}/UC-NNN-slug/`.
 - Each file must include Jekyll front matter.
+- Every URL shown in markdown must be a clickable Markdown link, not raw URL text.
+- Verify each cited external URL by opening it before you keep it.
+- Never publish a link to a local file unless that file already exists.
 ```
 
 ---

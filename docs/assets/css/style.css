@@ -518,13 +518,6 @@ a:hover {
   gap: var(--space-3);
 }
 
-.card-cat-img {
-  width: 64px;
-  height: 64px;
-  opacity: 0.7;
-  align-self: flex-start;
-}
-
 .card-id,
 .card-depth {
   display: inline-flex;

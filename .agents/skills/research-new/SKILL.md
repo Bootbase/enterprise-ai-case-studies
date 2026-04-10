@@ -90,6 +90,13 @@ The brief must:
 
 Add one row to `docs/use-cases/README.md`, matching the existing table format exactly.
 
+### Step 6 — Verify Links Before Finishing
+
+- If you include any URL in the generated markdown, it must be a clickable Markdown link. Do not leave bare `https://...` text in the document.
+- Only link to local repository artifacts that already exist at commit time. Do not add "coming soon" file links.
+- Before you keep an external URL, open it and confirm it resolves to the content you are citing. Replace redirected or stale URLs with the final working page.
+- If a section does not need a link, omit the link instead of guessing.
+
 ## Writing Rules
 
 - Prefer short declarative sentences.
@@ -98,6 +105,7 @@ Add one row to `docs/use-cases/README.md`, matching the existing table format ex
 - Do not use rhetorical framing such as "the key insight is", "the market is telling us", or "this is not X, it is Y".
 - Do not pad with exhaustive examples once the point is clear.
 - If a number is estimated or directional, say so.
+- Keep links sparse. Use them only where they help the reader reach a real supporting artifact or source.
 
 ## Output Contract
 
@@ -120,3 +128,4 @@ No `{placeholder}` text may remain.
 - Use real company names, tools, and metrics. Never fabricate them.
 - Keep the brief readable on the site. If a section feels like an appendix, cut it.
 - The goal is a high-signal brief that earns a future `research-complete`, not a complete solution design.
+- A dead link is worse than no link. If you cannot verify a URL or local artifact, do not link it.

@@ -60,7 +60,7 @@ class InvoicePacket(BaseModel):
     confidence: float
 
 client = OpenAI(
-    base_url="https://YOUR-RESOURCE-NAME.openai.azure.com/openai/v1/",
+    base_url=os.environ["AZURE_OPENAI_BASE_URL"],
     api_key=os.environ["AZURE_OPENAI_API_KEY"],
 )
 

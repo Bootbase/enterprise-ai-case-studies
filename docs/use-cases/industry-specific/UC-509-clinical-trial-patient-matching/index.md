@@ -48,7 +48,4 @@ The manual process of matching patients in electronic health records (EHR) to co
 
 ## Key Documents
 
-- [Solution Design](./solution-design.md) — Multi-agent orchestrator-worker architecture with RAG, protocol parsing, patient matching, site optimization, enrollment monitoring
-- Implementation Guide — Coming soon
-- Evaluation — Coming soon
-- References — Coming soon
+This case study is still at `research` status. Detailed artifacts are not published yet.

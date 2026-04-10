@@ -11,6 +11,7 @@ docs/use-cases/
   document-processing/
     UC-001-ap-invoice-processing/
     UC-002-mortgage-loan-processing/
+    UC-003-customs-trade-document-processing/
   customer-service/
     UC-100-customer-service-resolution/
     UC-101-it-service-desk-resolution/
@@ -62,7 +63,8 @@ docs/use-cases/
 | ID | Title | Category | Industry | Status | Directory |
 |---|-------|----------|----------|--------|-----------|
 | UC-001 | Autonomous AP Invoice Processing | Document Processing | Cross-Industry | detailed | `document-processing/UC-001-ap-invoice-processing/` |
-| UC-002 | Autonomous Mortgage Loan Document Processing | Document Processing | Financial Services | research | `document-processing/UC-002-mortgage-loan-processing/` |
+| UC-002 | Autonomous Mortgage Loan Document Processing | Document Processing | Financial Services | detailed | `document-processing/UC-002-mortgage-loan-processing/` |
+| UC-003 | Autonomous Customs Declaration and Trade Document Processing | Document Processing | Logistics / Global Trade | research | `document-processing/UC-003-customs-trade-document-processing/` |
 | UC-100 | Autonomous Customer Service Resolution | Customer Service | Cross-Industry | research | `customer-service/UC-100-customer-service-resolution/` |
 | UC-101 | Autonomous IT Service Desk Resolution | Customer Service | Cross-Industry | research | `customer-service/UC-101-it-service-desk-resolution/` |
 | UC-200 | Autonomous Freight Logistics Orchestration | Workflow Automation | Logistics / Transportation | research | `workflow-automation/UC-200-freight-logistics-orchestration/` |

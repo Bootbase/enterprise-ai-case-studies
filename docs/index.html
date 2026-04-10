@@ -78,9 +78,6 @@ title: Catalog
           <span class="card-id">{{ uc.uc_id }}</span>
           <span class="card-depth">{{ doc_count }} sections</span>
         </div>
-        {% assign cat_slug = uc.category | downcase | replace: " & ", "-" | replace: " ", "-" %}
-        <img src="{{ '/assets/img/cat-' | append: cat_slug | append: '.png' | relative_url }}"
-             alt="" class="card-cat-img" loading="lazy" width="200" height="200">
         <h3 class="card-title">{{ uc.title }}</h3>
         <p class="card-summary">{{ uc.summary }}</p>
         <div class="card-footer">

@@ -21,7 +21,7 @@ The tool will:
    - `new-and-complete`: `/research-new`, then `/research-complete <topicId>`
    - `detail-next`: find the next lowest-numbered use case that is not `detailed`, then run `/research-complete <topicId>`
 4. infer the `topicId` from agent output and the new use-case directory when needed
-5. verify the generated files
+5. verify the generated files, markdown links, and placeholder URLs
 6. commit and optionally push:
    - repository index files such as `README.md` and `docs/use-cases/README.md`
    - the generated or updated `docs/use-cases/.../UC-...` directory
@@ -128,6 +128,18 @@ Run for 8 hours instead of the default 24:
 research-runner run --root . --max-runtime-hours 8
 ```
 
+Verify repository markdown links:
+
+```bash
+research-runner verify-links --root .
+```
+
+Verify repository markdown links and issue HTTP checks for external URLs:
+
+```bash
+research-runner verify-links --root . --check-remote
+```
+
 ## CLI Arguments
 
 `research-runner run` supports:
@@ -152,6 +164,13 @@ research-runner run --root . --max-runtime-hours 8
   `new-and-complete` to create and complete new use cases, or `detail-next` to recursively complete the next existing use case that is not yet `detailed`.
 - `--resume-state`
   Alternate path for the persisted state file.
+
+`research-runner verify-links` supports:
+
+- `--root`
+  Repository root. Defaults to the current directory.
+- `--check-remote`
+  Also issue HTTP checks for external URLs. This requires network access.
 
 ## How Backends Work
 

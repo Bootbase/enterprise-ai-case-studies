@@ -1,0 +1,2 @@
+[console_scripts]
+research-runner = research_runner.cli:main

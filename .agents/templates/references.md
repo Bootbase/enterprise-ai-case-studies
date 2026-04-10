@@ -22,9 +22,9 @@ permalink: /use-cases/UC-{NNN}-{slug}/references/
 
 | ID | Type | Source | Why It Was Used | Link |
 |----|------|--------|-----------------|------|
-| {S1} | {Primary deployment / Official docs / Domain standard / Analysis} | {Source title} | {What it supports} | {URL} |
-| {S2} | {Primary deployment / Official docs / Domain standard / Analysis} | {Source title} | {What it supports} | {URL} |
-| {S3} | {Primary deployment / Official docs / Domain standard / Analysis} | {Source title} | {What it supports} | {URL} |
+| {S1} | {Primary deployment / Official docs / Domain standard / Analysis} | {Source title} | {What it supports} | [Verified link]({Verified URL}) |
+| {S2} | {Primary deployment / Official docs / Domain standard / Analysis} | {Source title} | {What it supports} | [Verified link]({Verified URL}) |
+| {S3} | {Primary deployment / Official docs / Domain standard / Analysis} | {Source title} | {What it supports} | [Verified link]({Verified URL}) |
 
 ## Claim Map
 

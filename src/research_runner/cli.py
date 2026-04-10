@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
 
 from .app import run_workflow
 from .backends import BACKENDS, get_backend
 from .config import build_config
 from .models import WorkflowMode
+from .verification import verify_repository_documents
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -44,6 +46,14 @@ def build_parser() -> argparse.ArgumentParser:
         "--resume-state",
         help="Alternate state-file path. Defaults to .research-runner/state.json under the repo root.",
     )
+
+    verify_parser = subparsers.add_parser("verify-links", help="Verify markdown links and placeholder URLs.")
+    verify_parser.add_argument("--root", default=".", help="Repository root. Defaults to the current directory.")
+    verify_parser.add_argument(
+        "--check-remote",
+        action="store_true",
+        help="Also issue HTTP checks for external URLs. Requires network access.",
+    )
     return parser
 
 
@@ -65,6 +75,11 @@ def main(argv: list[str] | None = None) -> int:
             workflow_mode=args.workflow_mode,
         )
         return run_workflow(config)
+
+    if args.command == "verify-links":
+        verified = verify_repository_documents(Path(args.root).resolve(), check_remote=args.check_remote)
+        print(f"Verified markdown links in {verified} files")
+        return 0
 
     parser.error(f"Unsupported command: {args.command}")
     return 2

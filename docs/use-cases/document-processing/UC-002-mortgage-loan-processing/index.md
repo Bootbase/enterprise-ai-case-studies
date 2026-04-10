@@ -7,13 +7,13 @@ category_dir: "document-processing"
 category_icon: "file-text"
 industry: "Financial Services (Mortgage Lending)"
 complexity: "High"
-status: "research"
+status: "detailed"
 summary: "Mortgage loan origination is one of the most document-intensive processes in financial services. Each loan file contains 200+ documents spanning 700+ possible document types — income verification (W-2s, pay stubs, tax returns), asset statements (bank and brokerage accounts), credit reports, property appraisals, title reports, insurance certificates, and regulatory disclosures."
 slug: "UC-002-mortgage-loan-processing"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-002-mortgage-loan-processing/
 ---
 

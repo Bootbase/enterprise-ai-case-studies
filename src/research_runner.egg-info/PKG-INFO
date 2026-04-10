@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: research-runner
+Version: 0.2.0
+Summary: Automate research-new and research-complete runs with any coding agent (Claude, Codex, etc.).
+Requires-Python: >=3.11

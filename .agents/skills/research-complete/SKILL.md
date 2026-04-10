@@ -118,6 +118,9 @@ Keep the files compact enough to read on the site:
 - include a source register with stable IDs such as `S1`, `S2`, `S3`
 - include a claim map that points major claims or sections back to those IDs
 - omit low-value source lists that are not used anywhere
+- make every external source a clickable Markdown link, not a bare URL
+- open every cited external URL before you keep it, and make sure it resolves to the source you are claiming
+- never link to a local artifact unless that file already exists in the use-case directory
 
 ### Step 5 — Update Status
 
@@ -144,6 +147,7 @@ Update:
   - hype
   - repetitive scene-setting
   - abstract management phrasing with no systems or process detail
+- Prefer no link over a speculative link. Every link must be real, reachable, and relevant.
 
 ## Output Contract
 
@@ -197,3 +201,5 @@ No `{placeholder}` text may remain.
 - If the evidence base is thin, say that directly and narrow the recommendation.
 - Focus on one strong reference architecture instead of listing every possible tool in the market.
 - The site publishes detailed case studies. Write for readers, not for the agent runtime.
+- Do not leave raw `https://...` text in markdown. Use clickable Markdown links everywhere a URL is shown.
+- Do not leave "coming soon" links to files that do not exist yet.
