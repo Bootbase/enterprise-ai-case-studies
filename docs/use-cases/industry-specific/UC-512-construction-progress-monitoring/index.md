@@ -7,13 +7,13 @@ category_dir: "industry-specific"
 category_icon: "briefcase"
 industry: "Construction"
 complexity: "High"
-status: "research"
+status: "detailed"
 summary: "Construction megaprojects routinely overrun budgets by 30% and schedules by 40%. AI agents that compare daily 360-degree site captures against BIM models and project schedules detect deviations in real time, predict delays weeks earlier than manual tracking, and cut rework costs -- turning reactive schedule recovery into proactive intervention."
 slug: "UC-512-construction-progress-monitoring"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-512-construction-progress-monitoring/
 ---
 
