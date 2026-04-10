@@ -68,7 +68,7 @@ This design covers the declaration-preparation layer of customs brokerage: inges
 | Component | Role | Notes |
 |-----------|------|-------|
 | Intake and normalization service | Registers documents, correlates them to shipments, runs OCR and layout extraction | Keeps source documents and extracted text versioned for audit |
-| Trade reasoning layer | Extracts declaration fields and ranks HS and origin candidates from retrieved sources | It only works against a bounded candidate set |
+| Trade reasoning layer | Extracts declaration fields and ranks HS and origin candidates from retrieved sources | It only works against a bounded candidate set. Published accuracy ranges from 80% (LLMs at 6-digit) to 95% (domain-trained at 11-digit) |
 | Tariff and compliance knowledge service | Serves tariff measures, origin rules, screening lists, and prior broker decisions | Versioning matters because tariff and filing rules change |
 | Deterministic validation engine | Enforces country schema rules, validates duty math, checks required fields, and blocks unsafe submissions | It rejects incomplete or contradictory drafts before transmission |
 | Broker review workbench | Presents evidence, confidence, candidate codes, and exceptions for approval or override | Human corrections become reusable memory for repeat SKUs |
@@ -98,7 +98,7 @@ This design covers the declaration-preparation layer of customs brokerage: inges
 | System | Integration Method | Why It Matters |
 |--------|--------------------|----------------|
 | Customs operating platform | REST API or event-driven adapter into CargoWise, Descartes, broker OMS, or importer compliance platform | This is where broker work already happens |
-| Country filing interfaces | Country-specific API or message adapter for CDS, ICS2-related ENS flows, and other certified customs channels | Filing contracts are formal and jurisdiction-specific |
+| Country filing interfaces | Country-specific API or message adapter for US ACE (via ABI), UK CDS (via HMRC API), EU ICS2 (via STI), and other certified customs channels | Filing contracts are formal and jurisdiction-specific. ABI is the only approved US filing method; CDS replaced CHIEF for UK declarations; ICS2 became mandatory across all EU transport modes in September 2025 |
 | Tariff and origin data services | Official tariff datasets or licensed tariff content, plus internal item master and ruling store | Classification quality depends on bounded retrieval and versioned data |
 | Screening and compliance services | Enterprise sanctions screening API plus case-management callback | Screening must stay deterministic and auditable |
 
