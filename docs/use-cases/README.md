@@ -43,6 +43,7 @@ docs/use-cases/
     UC-508-dynamic-pricing-optimization/
     UC-509-clinical-trial-patient-matching/
     UC-510-agriculture-crop-protection/
+    UC-511-insurance-underwriting-automation/
 ```
 
 ---
@@ -93,6 +94,7 @@ docs/use-cases/
 | UC-508 | Autonomous Dynamic Pricing and Revenue Optimization | Industry-Specific | Retail / E-Commerce | research | `industry-specific/UC-508-dynamic-pricing-optimization/` |
 | UC-509 | Autonomous Clinical Trial Patient Matching | Industry-Specific | Pharmaceutical | research | `industry-specific/UC-509-clinical-trial-patient-matching/` |
 | UC-510 | Autonomous Agricultural Crop Protection and Precision Treatment | Industry-Specific | Agriculture | detailed | `industry-specific/UC-510-agriculture-crop-protection/` |
+| UC-511 | Autonomous Property and Casualty Insurance Underwriting | Industry-Specific | Insurance | research | `industry-specific/UC-511-insurance-underwriting-automation/` |
 
 ---
 
