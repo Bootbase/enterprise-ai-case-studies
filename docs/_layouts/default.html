@@ -21,6 +21,25 @@
   </main>
   {% include footer.html %}
   <script>lucide.createIcons();</script>
+  <script>
+    // Open external links in a new tab.
+    (function () {
+      var here = window.location.hostname;
+      document.querySelectorAll('a[href]').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (!href || /^(#|mailto:|tel:|javascript:)/i.test(href)) return;
+        try {
+          var url = new URL(href, window.location.href);
+          if (!url.hostname || url.hostname === here) return;
+          a.setAttribute('target', '_blank');
+          var rel = (a.getAttribute('rel') || '').split(/\s+/).filter(Boolean);
+          if (rel.indexOf('noopener') === -1) rel.push('noopener');
+          if (rel.indexOf('noreferrer') === -1) rel.push('noreferrer');
+          a.setAttribute('rel', rel.join(' '));
+        } catch (e) {}
+      });
+    })();
+  </script>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
