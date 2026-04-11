@@ -1,6 +1,6 @@
 # Enterprise AI Case Studies
 
-A curated library of real-world enterprise AI case studies — each one researched from public evidence and documented end-to-end, from the business problem down to how you would actually build it.
+A curated library of published case studies showing how agentic AI systems are framed, designed, implemented, and evaluated in real enterprise environments.
 
 The goal is to answer a simple question for anyone evaluating agentic AI in the enterprise: **"Has someone already solved this, and what did it actually take?"**
 
