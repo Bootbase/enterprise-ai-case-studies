@@ -7,13 +7,13 @@ category_dir: "workflow-automation"
 category_icon: "settings"
 industry: "Cross-Industry (Retail, Food Service, Technology, Financial Services, Manufacturing)"
 complexity: "High"
-status: "research"
+status: "detailed"
 summary: "Multi-agent talent acquisition system autonomously manages end-to-end recruiting: resume screening (< 5 sec vs. 5-7 min), interview scheduling, candidate engagement, and evaluation synthesis. Reduces time-to-fill from 42 days to < 14 days, cost-per-hire by 40-60%, and recruiter administrative burden by 70-80% while maintaining 90%+ candidate satisfaction."
 slug: "UC-202-talent-acquisition"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-202-talent-acquisition/
 ---
 
