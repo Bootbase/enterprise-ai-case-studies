@@ -7,13 +7,13 @@ category_dir: "code-and-devops"
 category_icon: "terminal"
 industry: "Cross-Industry (Banking, Financial Services, Government, Insurance, Logistics, Telecommunications)"
 complexity: "High"
-status: "research"
+status: "detailed"
 summary: "Enterprises depend on 220–344 billion lines of COBOL code processing 95% of ATM transactions and 80% of credit card swipes, maintained by a shrinking 60-year-old workforce. Traditional modernization projects fail 74% of the time, costing tens to hundreds of millions and spanning 3–7 years. Agentic AI can compress timelines to months while reducing labor by 60%+."
 slug: "UC-302-legacy-code-modernization"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-302-legacy-code-modernization/
 ---
 

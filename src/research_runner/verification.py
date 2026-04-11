@@ -244,6 +244,7 @@ def _resolve_local_target(
     source_path: Path,
     target: str,
     permalink_map: dict[str, Path],
+    source_permalink: str | None = None,
 ) -> tuple[Path | None, str | None]:
     parsed = urllib_parse.urlsplit(target)
     if parsed.scheme or parsed.netloc:
@@ -257,11 +258,41 @@ def _resolve_local_target(
     if path_part.startswith("/"):
         return _resolve_site_root_target(root, path_part, permalink_map), fragment
 
+    # Jekyll clean-URL resolution: when the source page has a permalink, a
+    # relative link like "solution-design/" should resolve via the rendered
+    # site URL (source_permalink + target) and look up the matching page in
+    # the permalink map. This mirrors how Jekyll renders the link in prod.
+    if source_permalink:
+        joined = urllib_parse.urljoin(_normalize_permalink(source_permalink), path_part)
+        if joined.startswith("/"):
+            resolved = _resolve_site_root_target(root, joined, permalink_map)
+            if resolved is not None and resolved.exists():
+                return resolved, fragment
+
     candidate = (source_path.parent / path_part).resolve()
     try:
         candidate.relative_to(root.resolve())
     except ValueError:
         return None, fragment
+    if candidate.exists():
+        return candidate, fragment
+
+    # Fallback for clean-URL style relative links (e.g. "solution-design/"):
+    # try a sibling Markdown file with the same basename. This handles the
+    # common pattern where a sub-document lives next to index.md but is
+    # linked via its trailing-slash URL form.
+    if path_part.endswith("/"):
+        base = path_part.rstrip("/")
+        if base and not base.startswith("/"):
+            sibling = (source_path.parent / f"{base}.md").resolve()
+            try:
+                sibling.relative_to(root.resolve())
+            except ValueError:
+                pass
+            else:
+                if sibling.exists():
+                    return sibling, fragment
+
     return candidate, fragment
 
 
@@ -314,6 +345,7 @@ def _validate_markdown_links(
     check_remote: bool = False,
 ) -> None:
     content = path.read_text(encoding="utf-8")
+    source_permalink = _extract_frontmatter_permalink(content)
     stripped = _content_without_code(content)
 
     placeholder_match = PLACEHOLDER_URL_RE.search(stripped)
@@ -331,7 +363,9 @@ def _validate_markdown_links(
                 _validate_remote_url(target)
             continue
 
-        resolved, fragment = _resolve_local_target(root, path, target, permalink_map)
+        resolved, fragment = _resolve_local_target(
+            root, path, target, permalink_map, source_permalink=source_permalink
+        )
         if resolved is None or not resolved.exists():
             raise RuntimeError(f"{path} links to missing target: {target}")
         if fragment:

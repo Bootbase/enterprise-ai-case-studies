@@ -85,7 +85,7 @@ docs/use-cases/
 | UC-302 | Autonomous Legacy Code Modernization | Code & DevOps | Cross-Industry | detailed | `code-and-devops/UC-302-legacy-code-modernization/` |
 | UC-400 | Autonomous Knowledge Synthesis (Consulting Copilot) | Knowledge Management | Consulting | detailed | `knowledge-management/UC-400-knowledge-synthesis-consulting/` |
 | UC-401 | Autonomous Regulatory Change Intelligence | Knowledge Management | Cross-Industry | detailed | `knowledge-management/UC-401-regulatory-change-intelligence/` |
-| UC-500 | Autonomous Pharma Adverse Event Processing | Industry-Specific | Pharmaceutical | research | `industry-specific/UC-500-pharma-adverse-event-processing/` |
+| UC-500 | Autonomous Pharma Adverse Event Processing | Industry-Specific | Pharmaceutical | detailed | `industry-specific/UC-500-pharma-adverse-event-processing/` |
 | UC-501 | Autonomous Insurance Claims Processing | Industry-Specific | Insurance | research | `industry-specific/UC-501-insurance-claims-processing/` |
 | UC-502 | Autonomous M&A Due Diligence (Legal AI) | Industry-Specific | Legal | research | `industry-specific/UC-502-legal-ma-due-diligence/` |
 | UC-503 | Autonomous AML Investigation in Banking | Industry-Specific | Banking / FinServ | research | `industry-specific/UC-503-banking-aml-investigation/` |

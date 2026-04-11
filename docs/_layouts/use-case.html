@@ -67,28 +67,3 @@ layout: default
     </article>
   </div>
 </div>
-
-<a href="#top" class="uc-back-to-top" aria-label="Back to top" data-back-to-top>
-  <i data-lucide="arrow-up"></i>
-</a>
-
-<script>
-  (function () {
-    var btn = document.querySelector('[data-back-to-top]');
-    if (!btn) return;
-    var threshold = 320;
-    var toggle = function () {
-      if (window.scrollY > threshold) {
-        btn.classList.add('is-visible');
-      } else {
-        btn.classList.remove('is-visible');
-      }
-    };
-    window.addEventListener('scroll', toggle, { passive: true });
-    toggle();
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  })();
-</script>
