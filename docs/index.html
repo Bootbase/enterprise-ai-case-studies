@@ -49,7 +49,6 @@ title: Catalog
           <button class="chip chip-active" data-sort="id-asc">ID</button>
           <button class="chip" data-sort="added-desc">Newest</button>
           <button class="chip" data-sort="added-asc">Oldest</button>
-          <button class="chip" data-sort="updated-desc">Updated</button>
         </div>
       </div>
       <div class="filter-group filter-group-search">
@@ -73,13 +72,13 @@ title: Catalog
       {% if uc.has_implementation_guide %}{% assign doc_count = doc_count | plus: 1 %}{% endif %}
       {% if uc.has_evaluation %}{% assign doc_count = doc_count | plus: 1 %}{% endif %}
       {% if uc.has_references %}{% assign doc_count = doc_count | plus: 1 %}{% endif %}
+      {% assign card_date = uc.date_updated | default: uc.date_added %}
       <a href="{{ uc.url | relative_url }}" class="uc-card"
          data-category="{{ uc.category }}"
          data-industry="{{ uc.industry }}"
          data-title="{{ uc.title | downcase }}"
          data-id="{{ uc.uc_id | downcase }}"
-         data-added="{{ uc.date_added }}"
-         data-updated="{{ uc.date_updated }}">
+         data-added="{{ card_date }}">
         <div class="card-header">
           <span class="card-id">{{ uc.uc_id }}</span>
           <span class="card-depth">{{ doc_count }} sections</span>
@@ -95,22 +94,6 @@ title: Catalog
             {{ uc.industry }}
           </span>
         </div>
-        {% if uc.date_added or uc.date_updated %}
-        <div class="card-dates">
-          {% if uc.date_added %}
-          <span class="card-date">
-            <i data-lucide="calendar-plus"></i>
-            Added <time datetime="{{ uc.date_added }}">{{ uc.date_added | date: "%b %-d, %Y" }}</time>
-          </span>
-          {% endif %}
-          {% if uc.date_updated and uc.date_updated != uc.date_added %}
-          <span class="card-date">
-            <i data-lucide="refresh-cw"></i>
-            Updated <time datetime="{{ uc.date_updated }}">{{ uc.date_updated | date: "%b %-d, %Y" }}</time>
-          </span>
-          {% endif %}
-        </div>
-        {% endif %}
         <div class="card-docs">
           {% if uc.has_solution_design %}<span class="doc-indicator"><i data-lucide="puzzle"></i></span>{% endif %}
           {% if uc.has_implementation_guide %}<span class="doc-indicator"><i data-lucide="wrench"></i></span>{% endif %}
@@ -189,9 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
                  a.dataset.id.localeCompare(b.dataset.id);
         case 'added-asc':
           return (a.dataset.added || '').localeCompare(b.dataset.added || '') ||
-                 a.dataset.id.localeCompare(b.dataset.id);
-        case 'updated-desc':
-          return (b.dataset.updated || '').localeCompare(a.dataset.updated || '') ||
                  a.dataset.id.localeCompare(b.dataset.id);
         default:
           return 0;

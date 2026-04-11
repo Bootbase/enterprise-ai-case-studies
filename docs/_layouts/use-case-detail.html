@@ -36,24 +36,6 @@ layout: default
       </span>
       {% endif %}
     </div>
-    {% assign date_added = parent.date_added | default: page.date_added %}
-    {% assign date_updated = parent.date_updated | default: page.date_updated %}
-    {% if date_added or date_updated %}
-    <div class="uc-dates">
-      {% if date_added %}
-      <span class="uc-date">
-        <i data-lucide="calendar-plus"></i>
-        Added <time datetime="{{ date_added }}">{{ date_added | date: "%b %-d, %Y" }}</time>
-      </span>
-      {% endif %}
-      {% if date_updated and date_updated != date_added %}
-      <span class="uc-date">
-        <i data-lucide="refresh-cw"></i>
-        Updated <time datetime="{{ date_updated }}">{{ date_updated | date: "%b %-d, %Y" }}</time>
-      </span>
-      {% endif %}
-    </div>
-    {% endif %}
   </div>
 </div>
 

@@ -591,36 +591,6 @@ a:hover {
   height: 13px;
 }
 
-.card-dates {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3) var(--space-4);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--muted-soft);
-  text-transform: uppercase;
-}
-
-.card-date {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.card-date i {
-  width: 13px;
-  height: 13px;
-  color: var(--muted-soft);
-}
-
-.card-date time {
-  color: var(--muted);
-  text-transform: none;
-  letter-spacing: normal;
-  font-weight: 700;
-}
-
 .card-docs {
   padding-top: var(--space-4);
   border-top: 1px solid rgba(20, 20, 19, 0.08);
@@ -779,35 +749,15 @@ a:hover {
   background: rgba(33, 136, 99, 0.12);
 }
 
-.uc-dates {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
-  margin-top: var(--space-4);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.uc-added-note {
+  margin-top: var(--space-3);
+  font-size: 0.72rem;
+  font-weight: 500;
   color: var(--muted-soft);
 }
 
-.uc-date {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.uc-date i {
-  width: 14px;
-  height: 14px;
+.uc-added-note time {
   color: var(--muted-soft);
-}
-
-.uc-date time {
-  color: var(--muted);
-  text-transform: none;
-  letter-spacing: normal;
-  font-weight: 700;
 }
 
 .uc-content-area {
