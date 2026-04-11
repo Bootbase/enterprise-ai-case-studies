@@ -7,13 +7,13 @@ category_dir: "knowledge-management"
 category_icon: "book-open"
 industry: "Cross-Industry (Financial Services, Pharmaceutical, Healthcare, Energy, Insurance)"
 complexity: "High"
-status: "research"
+status: "detailed"
 summary: "Regulated enterprises monitor over 10,000 issuing bodies across 750 jurisdictions with a 23% YoY increase in regulatory changes. Manual compliance teams spend 30-50% of time monitoring regulatory sources while an MiFID II analysis that consumed 1,800 hours of manual work now takes 2.5 minutes with AI. The end-to-end assessment-to-implementation cycle averages 3-9 months and delays expose firms to enforcement risk."
 slug: "UC-401-regulatory-change-intelligence"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-401-regulatory-change-intelligence/
 ---
 
