@@ -62,7 +62,6 @@ body {
 
 
 main,
-.site-header,
 .site-footer {
   position: relative;
   z-index: 1;
@@ -95,7 +94,8 @@ a:hover {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(250, 249, 245, 0.95);
+  z-index: 50;
+  background: var(--bg);
   border-bottom: 1px solid rgba(20, 20, 19, 0.08);
 }
 
@@ -748,6 +748,44 @@ a:hover {
 
 .uc-content-area {
   padding-bottom: var(--space-20);
+}
+
+.uc-back-to-top {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2.5rem);
+  bottom: clamp(1.25rem, 4vw, 2.5rem);
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 20, 19, 0.12);
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition: opacity 200ms ease, transform 200ms ease, background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.uc-back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.uc-back-to-top:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #141413, #2a2a28);
+  border-color: transparent;
+}
+
+.uc-back-to-top i {
+  width: 18px;
+  height: 18px;
 }
 
 .uc-tabs {
