@@ -364,9 +364,10 @@ a:hover {
 
 .filters-bar {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
-  gap: var(--space-6);
+  gap: var(--space-5) var(--space-6);
   padding: 1rem 1.2rem;
   border-radius: calc(var(--radius-md) + 2px);
   border: 1px solid rgba(20, 20, 19, 0.07);
@@ -1130,9 +1131,14 @@ a:hover {
   }
 
   .filter-chips {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 0.2rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .chip {
+    min-height: 2rem;
+    padding: 0.42rem 0.75rem;
+    font-size: 0.78rem;
   }
 
   .card-grid {
