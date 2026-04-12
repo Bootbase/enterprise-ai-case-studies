@@ -104,7 +104,7 @@ docs/use-cases/
 | UC-513 | Autonomous Medical Prior Authorization Processing | Industry-Specific | Healthcare | detailed | `industry-specific/UC-513-medical-prior-authorization/` |
 | UC-514 | Autonomous Aviation Fleet Predictive Maintenance | Industry-Specific | Aerospace / Aviation | detailed | `industry-specific/UC-514-aviation-fleet-predictive-maintenance/` |
 | UC-515 | Autonomous Municipal Building Permit Review | Industry-Specific | Government / Public Sector | detailed | `industry-specific/UC-515-municipal-building-permit-review/` |
-| UC-516 | Autonomous Trade Surveillance and Market Abuse Detection | Industry-Specific | Capital Markets | research | `industry-specific/UC-516-trade-surveillance-market-abuse/` |
+| UC-516 | Autonomous Trade Surveillance and Market Abuse Detection | Industry-Specific | Capital Markets | detailed | `industry-specific/UC-516-trade-surveillance-market-abuse/` |
 
 ---
 

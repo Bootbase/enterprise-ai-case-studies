@@ -7,15 +7,15 @@ category_dir: "industry-specific"
 category_icon: "briefcase"
 industry: "Capital Markets"
 complexity: "High"
-status: "research"
+status: "detailed"
 date_added: "2026-04-12"
 date_updated: "2026-04-12"
 summary: "Rule-based trade surveillance systems at exchanges and broker-dealers generate 90–95% false positive rates, burying market surveillance analysts in alerts while sophisticated manipulation patterns go undetected. An agentic AI system triages alerts, correlates order-book patterns with news and communications data, and drafts investigation narratives — reducing false positives by up to 85% and cutting investigation time by a third."
 slug: "UC-516-trade-surveillance-market-abuse"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-516-trade-surveillance-market-abuse/
 ---
 
