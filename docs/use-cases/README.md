@@ -102,7 +102,7 @@ docs/use-cases/
 | UC-512 | Autonomous Construction Progress Monitoring and Delay Prediction | Industry-Specific | Construction | detailed | `industry-specific/UC-512-construction-progress-monitoring/` |
 | UC-513 | Autonomous Medical Prior Authorization Processing | Industry-Specific | Healthcare | detailed | `industry-specific/UC-513-medical-prior-authorization/` |
 | UC-514 | Autonomous Aviation Fleet Predictive Maintenance | Industry-Specific | Aerospace / Aviation | detailed | `industry-specific/UC-514-aviation-fleet-predictive-maintenance/` |
-| UC-515 | Autonomous Municipal Building Permit Review | Industry-Specific | Government / Public Sector | research | `industry-specific/UC-515-municipal-building-permit-review/` |
+| UC-515 | Autonomous Municipal Building Permit Review | Industry-Specific | Government / Public Sector | detailed | `industry-specific/UC-515-municipal-building-permit-review/` |
 
 ---
 

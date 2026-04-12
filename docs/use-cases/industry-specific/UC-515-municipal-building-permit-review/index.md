@@ -7,15 +7,15 @@ category_dir: "industry-specific"
 category_icon: "building"
 industry: "Government / Public Sector"
 complexity: "High"
-status: "research"
+status: "detailed"
 date_added: "2026-04-12"
 date_updated: "2026-04-12"
 summary: "Municipal building departments face year-long permit backlogs driven by staff shortages and complex code checks. AI-powered plan review tools pre-screen submissions against zoning, building, fire, and accessibility codes, compressing review timelines from months to days and freeing plan examiners to focus on judgment-intensive cases."
 slug: "UC-515-municipal-building-permit-review"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-515-municipal-building-permit-review/
 ---
 
