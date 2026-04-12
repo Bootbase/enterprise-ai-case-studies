@@ -7,15 +7,15 @@ category_dir: "industry-specific"
 category_icon: "🚢"
 industry: "Maritime / Shipping"
 complexity: "High"
-status: "research"
+status: "detailed"
 date_added: "2026-04-12"
 date_updated: "2026-04-12"
 summary: "Maritime operators spend over $126 billion annually on bunker fuel — their largest single cost — while facing IMO carbon intensity regulations that tighten each year. AI-driven voyage optimization uses vessel-specific digital twins, real-time weather and ocean data, and dynamic speed-routing algorithms to cut fuel consumption 4–12% per voyage and keep fleets compliant with CII ratings."
 slug: "UC-518-vessel-voyage-optimization"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-518-vessel-voyage-optimization/
 ---
 

@@ -108,7 +108,7 @@ docs/use-cases/
 | UC-515 | Autonomous Municipal Building Permit Review | Industry-Specific | Government / Public Sector | detailed | `industry-specific/UC-515-municipal-building-permit-review/` |
 | UC-516 | Autonomous Trade Surveillance and Market Abuse Detection | Industry-Specific | Capital Markets | detailed | `industry-specific/UC-516-trade-surveillance-market-abuse/` |
 | UC-517 | Autonomous Water Network Leak Detection and Non-Revenue Water Reduction | Industry-Specific | Water / Utilities | detailed | `industry-specific/UC-517-water-network-leak-detection/` |
-| UC-518 | Autonomous Vessel Voyage Optimization and Fleet Decarbonization | Industry-Specific | Maritime / Shipping | research | `industry-specific/UC-518-vessel-voyage-optimization/` |
+| UC-518 | Autonomous Vessel Voyage Optimization and Fleet Decarbonization | Industry-Specific | Maritime / Shipping | detailed | `industry-specific/UC-518-vessel-voyage-optimization/` |
 
 ---
 
