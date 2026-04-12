@@ -90,7 +90,7 @@ docs/use-cases/
 | UC-502 | Autonomous M&A Due Diligence (Legal AI) | Industry-Specific | Legal | detailed | `industry-specific/UC-502-legal-ma-due-diligence/` |
 | UC-503 | Autonomous AML Investigation in Banking | Industry-Specific | Banking / FinServ | detailed | `industry-specific/UC-503-banking-aml-investigation/` |
 | UC-504 | Autonomous Energy Grid Optimization | Industry-Specific | Energy / Utilities | detailed | `industry-specific/UC-504-energy-grid-optimization/` |
-| UC-505 | Autonomous Clinical Documentation and Coding | Industry-Specific | Healthcare | research | `industry-specific/UC-505-clinical-documentation-coding/` |
+| UC-505 | Autonomous Clinical Documentation and Coding | Industry-Specific | Healthcare | detailed | `industry-specific/UC-505-clinical-documentation-coding/` |
 | UC-506 | Autonomous Telecom Network Operations | Industry-Specific | Telecommunications | research | `industry-specific/UC-506-telecom-network-operations/` |
 | UC-507 | Autonomous Manufacturing Quality Inspection | Industry-Specific | Manufacturing | research | `industry-specific/UC-507-manufacturing-quality-inspection/` |
 | UC-508 | Autonomous Dynamic Pricing and Revenue Optimization | Industry-Specific | Retail / E-Commerce | research | `industry-specific/UC-508-dynamic-pricing-optimization/` |
