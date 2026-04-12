@@ -87,8 +87,8 @@ docs/use-cases/
 | UC-401 | Autonomous Regulatory Change Intelligence | Knowledge Management | Cross-Industry | detailed | `knowledge-management/UC-401-regulatory-change-intelligence/` |
 | UC-500 | Autonomous Pharma Adverse Event Processing | Industry-Specific | Pharmaceutical | detailed | `industry-specific/UC-500-pharma-adverse-event-processing/` |
 | UC-501 | Autonomous Insurance Claims Processing | Industry-Specific | Insurance | detailed | `industry-specific/UC-501-insurance-claims-processing/` |
-| UC-502 | Autonomous M&A Due Diligence (Legal AI) | Industry-Specific | Legal | research | `industry-specific/UC-502-legal-ma-due-diligence/` |
-| UC-503 | Autonomous AML Investigation in Banking | Industry-Specific | Banking / FinServ | research | `industry-specific/UC-503-banking-aml-investigation/` |
+| UC-502 | Autonomous M&A Due Diligence (Legal AI) | Industry-Specific | Legal | detailed | `industry-specific/UC-502-legal-ma-due-diligence/` |
+| UC-503 | Autonomous AML Investigation in Banking | Industry-Specific | Banking / FinServ | detailed | `industry-specific/UC-503-banking-aml-investigation/` |
 | UC-504 | Autonomous Energy Grid Optimization | Industry-Specific | Energy / Utilities | research | `industry-specific/UC-504-energy-grid-optimization/` |
 | UC-505 | Autonomous Clinical Documentation and Coding | Industry-Specific | Healthcare | research | `industry-specific/UC-505-clinical-documentation-coding/` |
 | UC-506 | Autonomous Telecom Network Operations | Industry-Specific | Telecommunications | research | `industry-specific/UC-506-telecom-network-operations/` |

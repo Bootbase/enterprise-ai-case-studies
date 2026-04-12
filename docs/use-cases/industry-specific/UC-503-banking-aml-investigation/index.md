@@ -7,15 +7,15 @@ category_dir: "industry-specific"
 category_icon: "briefcase"
 industry: "Banking / Financial Services"
 complexity: "High"
-status: "research"
+status: "detailed"
 date_added: "2026-04-09"
-date_updated: "2026-04-10"
+date_updated: "2026-04-12"
 summary: "Global financial institutions spend USD 190–214 billion annually on AML compliance, with 79% spent on personnel navigating alert queues. Transaction monitoring systems generate 90–95% false positives. An agentic AI system autonomously investigates alerts across 6–12 siloed systems, drafts SAR-quality narratives, and enables look-back exercises at machine speed—reducing per-alert cost from USD 30–6,000 by 40–60% while passing regulatory examination."
 slug: "UC-503-banking-aml-investigation"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-503-banking-aml-investigation/
 ---
 
