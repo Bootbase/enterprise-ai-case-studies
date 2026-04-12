@@ -7,15 +7,15 @@ category_dir: "industry-specific"
 category_icon: "plane"
 industry: "Aerospace / Aviation"
 complexity: "High"
-status: "research"
+status: "detailed"
 date_added: "2026-04-12"
 date_updated: "2026-04-12"
 summary: "Airlines lose over $33 billion annually to unplanned aircraft downtime. AI-driven predictive maintenance systems ingest full-flight sensor data across entire fleets to forecast component failures weeks to months ahead, converting unscheduled ground events into planned shop visits and cutting maintenance-related cancellations by over 99%."
 slug: "UC-514-aviation-fleet-predictive-maintenance"
-has_solution_design: false
-has_implementation_guide: false
-has_evaluation: false
-has_references: false
+has_solution_design: true
+has_implementation_guide: true
+has_evaluation: true
+has_references: true
 permalink: /use-cases/UC-514-aviation-fleet-predictive-maintenance/
 ---
 

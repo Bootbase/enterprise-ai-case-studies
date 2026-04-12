@@ -100,7 +100,7 @@ docs/use-cases/
 | UC-511 | Autonomous Property and Casualty Insurance Underwriting | Industry-Specific | Insurance | detailed | `industry-specific/UC-511-insurance-underwriting-automation/` |
 | UC-512 | Autonomous Construction Progress Monitoring and Delay Prediction | Industry-Specific | Construction | detailed | `industry-specific/UC-512-construction-progress-monitoring/` |
 | UC-513 | Autonomous Medical Prior Authorization Processing | Industry-Specific | Healthcare | detailed | `industry-specific/UC-513-medical-prior-authorization/` |
-| UC-514 | Autonomous Aviation Fleet Predictive Maintenance | Industry-Specific | Aerospace / Aviation | research | `industry-specific/UC-514-aviation-fleet-predictive-maintenance/` |
+| UC-514 | Autonomous Aviation Fleet Predictive Maintenance | Industry-Specific | Aerospace / Aviation | detailed | `industry-specific/UC-514-aviation-fleet-predictive-maintenance/` |
 
 ---
 
