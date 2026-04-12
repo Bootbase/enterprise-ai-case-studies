@@ -49,6 +49,7 @@ docs/use-cases/
     UC-514-aviation-fleet-predictive-maintenance/
     UC-515-municipal-building-permit-review/
     UC-516-trade-surveillance-market-abuse/
+    UC-517-water-network-leak-detection/
 ```
 
 ---
@@ -105,6 +106,7 @@ docs/use-cases/
 | UC-514 | Autonomous Aviation Fleet Predictive Maintenance | Industry-Specific | Aerospace / Aviation | detailed | `industry-specific/UC-514-aviation-fleet-predictive-maintenance/` |
 | UC-515 | Autonomous Municipal Building Permit Review | Industry-Specific | Government / Public Sector | detailed | `industry-specific/UC-515-municipal-building-permit-review/` |
 | UC-516 | Autonomous Trade Surveillance and Market Abuse Detection | Industry-Specific | Capital Markets | detailed | `industry-specific/UC-516-trade-surveillance-market-abuse/` |
+| UC-517 | Autonomous Water Network Leak Detection and Non-Revenue Water Reduction | Industry-Specific | Water / Utilities | research | `industry-specific/UC-517-water-network-leak-detection/` |
 
 ---
 
